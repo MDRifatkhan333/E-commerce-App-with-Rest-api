@@ -11,10 +11,12 @@ class SingleProductPage extends StatefulWidget {
 }
 
 class _SingleProductPageState extends State<SingleProductPage> {
-  int _counter = 0;
+  double _counter = 0.0;
+
   void _incrementCounter() {
     setState(() {
       _counter++;
+
       print(_counter);
     });
   }
@@ -96,7 +98,7 @@ class _SingleProductPageState extends State<SingleProductPage> {
             ),
           ),
           Container(
-            height: 180,
+            //height: 180,
             //color: Colors.blue,
             child: Row(
               children: [
@@ -156,7 +158,8 @@ class _SingleProductPageState extends State<SingleProductPage> {
                         ),
                         child: Center(
                           child: Text(
-                            "\$" + " $_counter",
+                            (_counter * 5).toStringAsFixed(2),
+                            // "\$" + " $_counter",
                             style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
